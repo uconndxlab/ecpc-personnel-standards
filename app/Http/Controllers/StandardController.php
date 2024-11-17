@@ -141,9 +141,9 @@ class StandardController extends Controller
             $standard->license_certificate = $fields['License/Certificate'] ?? "NA";
             $standard->state_department = $fields['State Department'] ?? "NA";
             $standard->state_department_hyperlink = $fields['State Department Hyperlink'] ?? "NA";
-            $standard->type_of_license_certificate = $fields['Type of License/Certificate'] ?? null;
-            $standard->age_range = $fields['Age Range'] ?? null;
-            $standard->degree_level_requirement = $fields['Degree Level Requirement'] ?? null;
+            $standard->type_of_license_certificate = $fields['Type of License/Certificate'] ?? "NA";
+            $standard->age_range = $fields['Age Range'] ?? "NA";
+            $standard->degree_level_requirement = $fields['Degree Level Requirement'] ?? "NA";
             $standard->licensure_specific_coursework = $fields['Licensure Require Specific Field or Clinical Work?'] ?? null;
             $standard->licensure_dependent_on_exam = $fields['Licensure Dependent on an Exam?'] ?? null;
             $standard->additional_req_part_c = $fields['Additoinal requirements specific to Part C?'] ?? null;
