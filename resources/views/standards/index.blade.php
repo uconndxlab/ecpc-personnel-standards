@@ -68,5 +68,27 @@
     <p>No standards available.</p>
 @else
 
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>State</th>
+            <th>Grade</th>
+            <th>Subject</th>
+            <th>Standard</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach($standards as $standard)
+            <tr>
+                <td>{{ $standard->state }}</td>
+                <td>{{ $standard->grade }}</td>
+                <td>{{ $standard->subject }}</td>
+                <td>{{ $standard->standard }}</td>
+            </tr>
+        @endforeach
+    </tbody>
+</table>
+
 @endif
 @endsection
