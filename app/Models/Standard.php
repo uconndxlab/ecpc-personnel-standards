@@ -26,6 +26,7 @@ class Standard extends Model
         'additional_req_schools',
         'additional_route_provisional_temp',
         'state_id',
+        'requires_specific_fieldwork',
         'name'
     ];
     

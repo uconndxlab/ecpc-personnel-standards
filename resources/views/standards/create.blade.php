@@ -79,6 +79,10 @@
                 <label for="licensure_specific_coursework" class="form-label">Licensure Specific Coursework/Fieldwork</label>
                 <textarea class="form-control" id="licensure_specific_coursework" name="licensure_specific_coursework">{{ old('licensure_specific_coursework') }}</textarea>
             </div>
+            <div class="col">
+                <label for="requires_specific_fieldwork" class="form-label">Licensure Require Specific Field or Clinical Work</label>
+                <textarea class="form-control" id="requires_specific_fieldwork" name="requires_specific_fieldwork">{{ old('licensure_require_specific_field_or_clinical_work') }}</textarea>
+            </div>
         </div>
 
         <div class="row mb-3">

@@ -47,7 +47,7 @@
                                 <dd class="col-sm-8">{{ $standard->licensure_specific_coursework }}</dd>
 
                                 <dt class="col-sm-4">Licensure Require Specific Field or Clinical Work?</dt>
-                                <dd class="col-sm-8">{{ $standard->licensure_require_specific_field_or_clinical_work }}</dd>
+                                <dd class="col-sm-8">{{ $standard->requires_specific_fieldwork }}</dd>
 
                                 <dt class="col-sm-4">Licensure Dependent on an Exam?</dt>
                                 <dd class="col-sm-8">{{ $standard->licensure_dependent_on_exam }}</dd>
