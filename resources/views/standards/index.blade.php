@@ -3,7 +3,6 @@
 @section('content')
 <div class="d-flex justify-content-between align-items-center mb-3">
     <h2>Standards</h2>
-    <a href="{{ route('standards.create') }}" class="btn btn-primary">Add New Standard</a>
 </div>
 
 @if (session('success'))
