@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Discipline;
+use App\Models\State;
 
 class DisciplineController extends Controller
 {
@@ -15,7 +16,9 @@ class DisciplineController extends Controller
 
     public function create()
     {
-        return view('disciplines.create');
+        $states = State::all();
+
+        return view('disciplines.create')->with('states', $states);
     }
 
     public function store(Request $request)

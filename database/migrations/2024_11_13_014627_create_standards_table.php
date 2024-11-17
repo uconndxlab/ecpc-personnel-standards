@@ -14,7 +14,6 @@ class CreateStandardsTable extends Migration
     {
         Schema::create('standards', function (Blueprint $table) {
             $table->id();
-            $table->string('discipline');
             $table->string('license_certificate');
             $table->string('state_department');
             $table->string('state_department_hyperlink')->nullable();
@@ -27,6 +26,8 @@ class CreateStandardsTable extends Migration
             $table->boolean('additional_req_part_c')->default(false);
             $table->boolean('additional_req_schools')->default(false);
             $table->string('additional_route_provisional_temp')->nullable();
+            $table->foreignId('discipline_id')->constrained()->onDelete('cascade');
+            $table->foreignId('state_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }

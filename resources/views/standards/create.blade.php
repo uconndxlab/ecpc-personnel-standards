@@ -21,17 +21,25 @@
             <label for="name" class="form-label">Standard Name</label>
             <input type="text" class="form-control" id="name" name="name" required>
         </div>
-        
 
         <div class="mb-3">
             <label for="discipline_id" class="form-label">Discipline</label>
             <select class="form-select" id="discipline_id" name="discipline_id" required>
-                <option value="">Select Discipline</option>
                 @foreach($disciplines as $discipline)
                     <option value="{{ $discipline->id }}">{{ $discipline->name }}</option>
                 @endforeach
             </select>
         </div>
+        
+        <div class="mb-3">
+            <label for="state_id" class="form-label">State</label>
+            <select class="form-select" id="state_id" name="state_id" required>
+                @foreach($states as $state)
+                    <option value="{{ $state->id }}">{{ $state->name }}</option>
+                @endforeach
+            </select>
+        </div>
+
 
         <div class="mb-3">
             <label for="license_certificate" class="form-label">License/Certificate</label>

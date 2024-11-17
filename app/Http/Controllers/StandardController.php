@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Standard;
 use Illuminate\Http\Request;
 use App\Models\Discipline;
+use App\Models\State;
 
 class StandardController extends Controller
 {
@@ -18,7 +19,8 @@ class StandardController extends Controller
     public function create()
     {
         $disciplines = Discipline::all();  // Fetch all disciplines
-        return view('standards.create', compact('disciplines'));
+        $states = State::all();  // Fetch all states
+        return view('standards.create', compact('disciplines', 'states'));
     }
 
     public function store(Request $request)

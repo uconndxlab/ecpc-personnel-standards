@@ -8,4 +8,4 @@ use App\Http\Controllers\DisciplineController;
 Route::resource('standards', StandardController::class);
 Route::resource('disciplines', DisciplineController::class);
 
-Route::get('/', [StandardController::class, 'index']);
+Route::get('/', [StandardController::class, 'index'])->name('index');

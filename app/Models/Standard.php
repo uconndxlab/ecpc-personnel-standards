@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Discipline;
+use App\Models\State;
 
 class Standard extends Model
 {
@@ -28,5 +30,10 @@ class Standard extends Model
     public function discipline()
     {
         return $this->belongsTo(Discipline::class);
+    }
+
+    public function state()
+    {
+        return $this->belongsTo(State::class);
     }
 }
