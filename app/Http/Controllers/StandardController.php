@@ -69,4 +69,19 @@ class StandardController extends Controller
         return redirect()->route('standards.index')
                          ->with('success', 'Standard updated successfully');
     }
+
+    public function edit(Standard $standard)
+    {
+        $disciplines = Discipline::all();  // Fetch all disciplines
+        $states = State::all();  // Fetch all states
+        return view('standards.edit', compact('standard', 'disciplines', 'states'));
+    }
+
+    public function destroy(Standard $standard)
+    {
+        $standard->delete();
+
+        return redirect()->route('standards.index')
+                         ->with('success', 'Standard deleted successfully');
+    }
 }
