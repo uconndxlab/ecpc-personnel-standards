@@ -1,4 +1,8 @@
 @extends('layouts.app')
+@php
+    $current_state = $state;
+@endphp
+    
 
 @section('content')
 <div class="container">
@@ -6,6 +10,24 @@
 
     @if($standards->isEmpty())
         <p>No standards available for this state.</p>
+
+        <h1>Import Standards for {{ $state->name }}</h1>
+        <form action="{{ route('standards.import') }}" method="POST">
+            @csrf
+            <div class="mb-3">
+                <input type="hidden" name="state" value="{{ $current_state->abbreviation }}">
+                </select>
+            </div>
+        
+            <div class="mb-3">
+                <label for="data" class="form-label">Tab-Separated Data</label>
+                <textarea name="data" id="data" class="form-control" rows="10" required></textarea>
+            </div>
+        
+            <button type="submit" class="btn btn-primary">Import Standards</button>
+        </form>
+
+
     @else
         <div class="accordion" id="standardsAccordion">
             @foreach($standards as $standard)

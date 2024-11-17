@@ -138,9 +138,9 @@ class StandardController extends Controller
             $standard->name = $disciplineName;
             $standard->state_id = State::where('abbreviation', $stateAbbreviation)->value('id');
             $standard->discipline_id = Discipline::firstOrCreate(['name' => $disciplineName])->id;
-            $standard->license_certificate = $fields['License/Certificate'] ?? null;
-            $standard->state_department = $fields['State Department'] ?? null;
-            $standard->state_department_hyperlink = $fields['State Department Hyperlink'] ?? null;
+            $standard->license_certificate = $fields['License/Certificate'] ?? "NA";
+            $standard->state_department = $fields['State Department'] ?? "NA";
+            $standard->state_department_hyperlink = $fields['State Department Hyperlink'] ?? "NA";
             $standard->type_of_license_certificate = $fields['Type of License/Certificate'] ?? null;
             $standard->age_range = $fields['Age Range'] ?? null;
             $standard->degree_level_requirement = $fields['Degree Level Requirement'] ?? null;

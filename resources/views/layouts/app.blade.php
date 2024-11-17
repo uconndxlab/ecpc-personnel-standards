@@ -22,9 +22,6 @@
                 <ul class="navbar-nav
             ">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('disciplines.index') }}">Disciplines</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="{{ route('standards.index') }}">Standards</a>
                     </li>
                 </ul>

@@ -21,7 +21,8 @@ class StateController extends Controller
 
         // Load associated standards with discipline for display
         $standards = $state->standards()->with('discipline')->get();
+        $states = State::all(); // Fetch all states
 
-        return view('states.show', compact('state', 'standards'));
+        return view('states.show', compact('state', 'standards', 'states'));
     }
 }
