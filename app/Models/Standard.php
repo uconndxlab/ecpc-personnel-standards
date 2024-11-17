@@ -25,6 +25,8 @@ class Standard extends Model
         'additional_req_part_c',
         'additional_req_schools',
         'additional_route_provisional_temp',
+        'state_id',
+        'name'
     ];
     
     public function discipline()
