@@ -15,6 +15,8 @@ class StateController extends Controller
     }
     public function show($abbreviation)
     {
+        // convert the abbreviation to uppercase to match the database
+        $abbreviation = strtoupper($abbreviation);
         $state = State::where('abbreviation', $abbreviation)->firstOrFail();
 
         // Load associated standards with discipline for display
