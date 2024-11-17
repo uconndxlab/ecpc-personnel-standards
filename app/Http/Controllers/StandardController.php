@@ -32,12 +32,6 @@ class StandardController extends Controller
             'license_certificate' => 'required',
             'state_department' => 'required',
             'type_of_license_certificate' => 'required',
-            'degree_level_requirement' => 'required',
-            'age_range' => 'required',
-            'licensure_specific_coursework' => 'required',
-            'licensure_dependent_on_exam' => 'required',
-            'additional_req_part_c' => 'required',
-            'additional_req_schools' => 'required',
         ]);
 
 
