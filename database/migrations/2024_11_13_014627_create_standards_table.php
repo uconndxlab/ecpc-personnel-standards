@@ -21,7 +21,6 @@ class CreateStandardsTable extends Migration
             $table->string('age_range')->nullable();
             $table->string('degree_level_requirement');
             $table->boolean('licensure_specific_coursework')->default(false);
-            $table->boolean('licensure_require_fieldwork')->default(false);
             $table->boolean('licensure_dependent_on_exam')->default(false);
             $table->boolean('additional_req_part_c')->default(false);
             $table->boolean('additional_req_schools')->default(false);
