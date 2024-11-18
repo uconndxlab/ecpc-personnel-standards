@@ -1,9 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="d-flex justify-content-between align-items-center mb-3">
-    <h2>Standards</h2>
-</div>
 
 @if (session('success'))
     <div class="alert alert-success">
@@ -68,26 +65,7 @@
 @else
 
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>State</th>
-            <th>Grade</th>
-            <th>Subject</th>
-            <th>Standard</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach($standards as $standard)
-            <tr>
-                <td>{{ $standard->state }}</td>
-                <td>{{ $standard->grade }}</td>
-                <td>{{ $standard->subject }}</td>
-                <td>{{ $standard->standard }}</td>
-            </tr>
-        @endforeach
-    </tbody>
-</table>
+
 
 @endif
 @endsection

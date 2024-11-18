@@ -74,12 +74,12 @@
                                 <dt class="col-sm-4">Licensure Dependent on an Exam?</dt>
                                 <dd class="col-sm-8">{{ $standard->licensure_dependent_on_exam }}</dd>
                             </dl>
-                            <a href="{{ route('standards.edit', $standard->id) }}" class="btn btn-primary">Edit</a>
+                            {{-- <a href="{{ route('standards.edit', $standard->id) }}" class="btn btn-primary">Edit</a>
                             <form action="{{ route('standards.destroy', $standard->id) }}" method="POST" class="d-inline">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger">Delete</button>
-                            </form>
+                            </form> --}}
                         </div>
                     </div>
                 </div>
