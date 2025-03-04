@@ -116,9 +116,9 @@
                     <!-- back to ecpc (external) -->
 
                     <li class="nav-item">
-                        <a class="nav-link" href="https://ecpcta.org" target="_blank" rel="noopener">
+                        <a class="nav-link" href="https://ecipc.org/" target="_blank" rel="noopener">
                             <i class="bi bi-box-arrow-up-right"></i>
-                            Back to ECPC
+                            Back to ECIPC
                         </a>
                     </li>
 
