@@ -6,7 +6,10 @@
 
 @section('content')
 <div class="container">
-    <h1>Standards for {{ $state->name }} ({{ $state->abbreviation }})</h1>
+    <div class="d-flex justify-content-between align-items-center">
+        <h1>Standards for {{ $state->name }} ({{ $state->abbreviation }})</h1>
+        <a href="{{ route('standards.create') }}" class="btn btn-primary">Create Standard</a>
+    </div>
 
     @if($standards->isEmpty())
         <p>No standards available for this state.</p>
@@ -33,7 +36,7 @@
             @foreach($standards as $standard)
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="heading-{{ $standard->id }}">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-{{ $standard->id }}" aria-expanded="false" aria-controls="collapse-{{ $standard->id }}">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-{{ $standard->id }}" aria-expanded="false" aria-controls="collapse-{{ $standard->id }}">
                             {{ $standard->name }} ({{ $standard->discipline->name }})
                         </button>
                     </h2>
@@ -74,8 +77,8 @@
                                 <dt class="col-sm-4">Licensure Dependent on an Exam?</dt>
                                 <dd class="col-sm-8">{{ $standard->licensure_dependent_on_exam }}</dd>
                             </dl>
-                            {{-- <a href="{{ route('standards.edit', $standard->id) }}" class="btn btn-primary">Edit</a>
-                            <form action="{{ route('standards.destroy', $standard->id) }}" method="POST" class="d-inline">
+                            <a href="{{ route('standards.edit', $standard->id) }}" class="btn btn-primary">Edit</a>
+                             {{--<form action="{{ route('standards.destroy', $standard->id) }}" method="POST" class="d-inline">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger">Delete</button>

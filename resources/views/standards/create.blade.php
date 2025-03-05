@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container text-white">
     <h2>Create Standard</h2>
 
     @if ($errors->any())
