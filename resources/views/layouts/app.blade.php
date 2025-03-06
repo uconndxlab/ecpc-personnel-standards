@@ -106,7 +106,7 @@
         <div class="container">
 
 
-            <a class="navbar-brand" href="{{ route('index') }}">ECPC Personnel Standards</a>
+            <a class="navbar-brand" href="{{ route('index') }}">ECIPC Personnel Standards Map</a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
