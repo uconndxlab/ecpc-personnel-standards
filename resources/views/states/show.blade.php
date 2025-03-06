@@ -76,13 +76,22 @@
 
                                 <dt class="col-sm-4">Licensure Dependent on an Exam?</dt>
                                 <dd class="col-sm-8">{{ $standard->licensure_dependent_on_exam }}</dd>
+
+                                <dt class="col-sm-4">Additional Req Part C</dt>
+                                <dd class="col-sm-8">{{ $standard->additional_req_part_c }}</dd>
+
+                                <dt class="col-sm-4">Additional Req Schools</dt>
+                                <dd class="col-sm-8">{{ $standard->additional_req_schools }}</dd>
                             </dl>
+
+                            @can('admin')
                             <a href="{{ route('standards.edit', $standard->id) }}" class="btn btn-primary">Edit</a>
-                             {{--<form action="{{ route('standards.destroy', $standard->id) }}" method="POST" class="d-inline">
+                             <form action="{{ route('standards.destroy', $standard->id) }}" method="POST" class="d-inline">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger">Delete</button>
-                            </form> --}}
+                            </form>
+                            @endcan
                         </div>
                     </div>
                 </div>
